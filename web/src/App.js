@@ -2,6 +2,7 @@ import React from 'react';
 import './global.css';
 import './App.css';
 import './Sidebar.css';
+import './Main.css'
 //Componente: função que retorna um HTML,CSS ou/e JS, não interfere na execução do restante da aplicação
 //Estado: informações mantidas pelo componentes
 //Propriedade: informações/atributos que um componente PAI  passa para um componente filho
@@ -43,8 +44,58 @@ function App() {
 
         </aside>
 
-        <main>
 
+        <main>
+          <ul>
+            <li className="dev-item">
+                <header>
+                  <img src="https://avatars1.githubusercontent.com/u/39017457?s=400&u=12665826e41e2256ba2d61c9c1a941009c832496&v=4" alt="Brener Quevedo"/>
+                  <div className="user-info">
+                    <strong>Brener Quevedo</strong>
+                    <span>React, Node, Mongo</span>
+                  </div>
+                </header>
+              
+                <p>biografia de teste</p>
+                <a href="https://github.com/BrenerQuevedo">Acessar perfil no github</a>
+            </li>
+            <li className="dev-item">
+                <header>
+                  <img src="https://avatars1.githubusercontent.com/u/39017457?s=400&u=12665826e41e2256ba2d61c9c1a941009c832496&v=4" alt="Brener Quevedo"/>
+                  <div className="user-info">
+                    <strong>Brener Quevedo</strong>
+                    <span>React, Node, Mongo</span>
+                  </div>
+                </header>
+              
+                <p>biografia de teste</p>
+                <a href="https://github.com/BrenerQuevedo">Acessar perfil no github</a>
+            </li>
+            <li className="dev-item">
+                <header>
+                  <img src="https://avatars1.githubusercontent.com/u/39017457?s=400&u=12665826e41e2256ba2d61c9c1a941009c832496&v=4" alt="Brener Quevedo"/>
+                  <div className="user-info">
+                    <strong>Brener Quevedo</strong>
+                    <span>React, Node, Mongo</span>
+                  </div>
+                </header>
+              
+                <p>biografia de teste</p>
+                <a href="https://github.com/BrenerQuevedo">Acessar perfil no github</a>
+            </li>
+            <li className="dev-item">
+                <header>
+                  <img src="https://avatars1.githubusercontent.com/u/39017457?s=400&u=12665826e41e2256ba2d61c9c1a941009c832496&v=4" alt="Brener Quevedo"/>
+                  <div className="user-info">
+                    <strong>Brener Quevedo</strong>
+                    <span>React, Node, Mongo</span>
+                  </div>
+                </header>
+              
+                <p>biografia de teste</p>
+                <a href="https://github.com/BrenerQuevedo">Acessar perfil no github</a>
+            </li>
+          </ul>
         </main>
       </div>
     );
