@@ -1,7 +1,7 @@
 import React from 'react';
 import './global.css';
 import './App.css';
-
+import './Sidebar.css';
 //Componente: função que retorna um HTML,CSS ou/e JS, não interfere na execução do restante da aplicação
 //Estado: informações mantidas pelo componentes
 //Propriedade: informações/atributos que um componente PAI  passa para um componente filho
@@ -14,7 +14,7 @@ function App() {
 
             <form>
               <div className="input-block">
-                <label htmlFor="github_username">Github Username</label>
+                <label htmlFor="github_username">Usuário Github</label>
                 <input name="github_username" id="github_username" required/>
               </div>
               
