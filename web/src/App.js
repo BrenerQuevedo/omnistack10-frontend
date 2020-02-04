@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './global.css';
 import './App.css';
 import './Sidebar.css';
@@ -7,7 +7,29 @@ import './Main.css'
 //Estado: informações mantidas pelo componentes
 //Propriedade: informações/atributos que um componente PAI  passa para um componente filho
 
+
+
 function App() {
+  const [latitude, setLatitude] = useState('');
+  const [longitude, setLongitude] = useState('');
+
+  useEffect(()=> {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const {latitude, longitude} = position.coords;
+         
+        setLatitude(latitude);
+         setLongitude(longitude);
+      },
+      (err) => {
+        console.log(err);
+      },
+      {
+        timeout: 30000,
+      }
+    );
+  }, []);
+
   return (
       <div id="app">
         <aside>
@@ -28,12 +50,12 @@ function App() {
                 
                 <div className="input-block">
                   <label htmlFor="latitude">Latitude</label>
-                  <input name="latitude" id="latitude" required/>
+                  <input name="latitude" id="latitude" required value={latitude}/>
                 </div>
 
                 <div className="input-block">
                   <label htmlFor="longitude">longitude</label>
-                  <input name="longitude" id="longitude" required/>
+                  <input name="longitude" id="longitude" required value={longitude}/>
                 </div>
 
               </div>
