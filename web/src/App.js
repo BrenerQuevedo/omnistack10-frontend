@@ -3,6 +3,9 @@ import './global.css';
 import './App.css';
 import './Sidebar.css';
 import './Main.css'
+
+import api from './services/api'
+
 //Componente: função que retorna um HTML,CSS ou/e JS, não interfere na execução do restante da aplicação
 //Estado: informações mantidas pelo componentes
 //Propriedade: informações/atributos que um componente PAI  passa para um componente filho
@@ -18,6 +21,17 @@ function App() {
 
   async function handleSubmit(e) {
       e.preventDefault();
+
+      const response = await api.post('/devs', {
+        github_username,
+        techs,
+        latitude,
+        longitude,
+      })
+
+      setGithub_username('');
+      setTechs('');
+      
   }
 
 
@@ -72,6 +86,7 @@ function App() {
                 <div className="input-block">
                   <label htmlFor="latitude">Latitude</label>
                   <input 
+                    type='number'
                     name="latitude" 
                     id="latitude" 
                     required 
@@ -82,7 +97,8 @@ function App() {
 
                 <div className="input-block">
                   <label htmlFor="longitude">longitude</label>
-                  <input 
+                  <input
+                  type='number' 
                   name="longitude"
                   id="longitude"
                   required 
